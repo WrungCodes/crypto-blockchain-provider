@@ -1,15 +1,12 @@
- interface Color {
-    red: number;
-    green: number;
-    blue: number;
+import { ICryptoProvider } from "./interfaces/ICryptoProvider";
+import { ProviderOptionsType } from "./interfaces/IProviderOptionsType";
+import * as Providers from "./providers";
+
+export interface ProviderOptions {}
+
+export async function getCryptoProvider([provider, options ]: ProviderOptionsType) : Promise<ICryptoProvider<any>> 
+{ 
+    return new Providers[provider](options);
 }
 
-const color : Color = {
-    red: 0,
-    green: 0,
-    blue: 0
-}
-
-console.log(color)
-
-export default color;
+console.log(Providers)
