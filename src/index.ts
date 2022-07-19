@@ -9,5 +9,3 @@ export async function getCryptoProvider([provider, options ]: ProviderOptionsTyp
 { 
     return new Providers[provider](options);
 }
-
-console.log(Providers)
