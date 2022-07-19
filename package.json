@@ -1,6 +1,6 @@
 {
   "name": "@softpay/crypto",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "softpay internal package for crypto functionalities",
   "main": "./build/index.js",
   "types": "./build/index.d.ts",
