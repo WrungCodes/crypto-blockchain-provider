@@ -5,7 +5,7 @@ import { IProvider } from "./interfaces/IProvider";
 
 export { IProvider }
 
-export async function getCryptoProvider([provider, options ]: ProviderOptionsType) : Promise<ICryptoProvider<any>> 
+export async function getCryptoProvider([provider, options ]: ProviderOptionsType) : Promise<ICryptoProvider<any, any>> 
 { 
     return new Providers[provider](options);
 }

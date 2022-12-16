@@ -2,7 +2,7 @@ import { ICryptoProvider } from "../../interfaces/ICryptoProvider";
 import { KeyPair, ProviderTxOptions, TransactionSendResult, TransactonData } from "../../interfaces/CyptoTransaction";
 import { ProviderOptions } from "../../interfaces/IProviderOptions";
 
-class BitcoinProvider implements ICryptoProvider<BitcoinTxOptions> {
+class BitcoinProvider implements ICryptoProvider<BitcoinTxOptions, BitcoinTxDataOptions> {
 
     constructor(options: ProviderOptions.BitcoinOptions) {}
 
@@ -22,7 +22,7 @@ class BitcoinProvider implements ICryptoProvider<BitcoinTxOptions> {
         throw new Error("Method not implemented.");
     }
 
-    txTransferRaw(options: BitcoinTxOptions): Promise<string> {
+    txTransferRaw(options: BitcoinTxDataOptions): Promise<string> {
         throw new Error("Method not implemented.");
     }
 
@@ -36,5 +36,7 @@ class BitcoinProvider implements ICryptoProvider<BitcoinTxOptions> {
 }
 
 export interface BitcoinTxOptions extends ProviderTxOptions {}
+
+export interface BitcoinTxDataOptions extends TransactonData {}
 
 export default BitcoinProvider;
