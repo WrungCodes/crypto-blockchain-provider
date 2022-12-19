@@ -1,4 +1,5 @@
 export enum IProvider {
     BTC = 'BTC',
-    ETH = 'ETH'
+    ETH = 'ETH',
+    ETHTOKEN = 'ETHTOKEN',
 }

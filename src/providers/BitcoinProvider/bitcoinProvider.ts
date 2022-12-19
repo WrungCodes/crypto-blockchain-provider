@@ -12,6 +12,10 @@ class BitcoinProvider implements ICryptoProvider<BitcoinTxOptions, BitcoinTxData
 
     constructor(options: ProviderOptions.BitcoinOptions) {}
 
+    initialize() {}
+
+    isToken: boolean = false;
+
     async generateKeyPair(): Promise<KeyPair> {
         const phrase = bip39.generateMnemonic();
         const bip32 = BIP32Factory(ecc);

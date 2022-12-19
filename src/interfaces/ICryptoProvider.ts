@@ -1,6 +1,8 @@
 import { KeyPair, TransactionSendResult, TransactonData } from "./CyptoTransaction";
 
 export interface ICryptoProvider<CustomTxOptions, CustomTxDataOptions> {
+  isToken: boolean;
+  initialize(): any;
   generateKeyPair(path?: string): Promise<KeyPair>;
   validateTransactionOptions(options: CustomTxOptions): Promise<boolean>;
   balanceByAddress(address: string, hashes?: any): Promise<string>;

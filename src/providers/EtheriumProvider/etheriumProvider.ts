@@ -16,6 +16,10 @@ class EtheriumProvider implements ICryptoProvider<EtheriumTxOptions, EtheriumTxD
         this.rpcAddress = options.rpcAddress
         this.web3 = new Web3(new Web3.providers.HttpProvider(this.rpcAddress));
     }
+    
+    initialize() {}
+
+    isToken: boolean = false;
 
     async generateKeyPair(): Promise<KeyPair> {
 
