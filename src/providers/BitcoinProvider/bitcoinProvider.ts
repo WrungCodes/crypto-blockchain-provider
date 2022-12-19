@@ -44,7 +44,7 @@ class BitcoinProvider implements ICryptoProvider<BitcoinTxOptions, BitcoinTxData
         throw new Error("Method not implemented.");
     }
 
-    txCreate(options: BitcoinTxOptions): Promise<TransactonData> {
+    txCreate(options: BitcoinTxOptions): Promise<BitcoinTxDataOptions> {
         throw new Error("Method not implemented.");
     }
 

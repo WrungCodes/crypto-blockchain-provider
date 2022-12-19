@@ -59,7 +59,7 @@ class EtheriumProvider implements ICryptoProvider<EtheriumTxOptions, EtheriumTxD
         return await this.web3.eth.getBalance(address)
     }
 
-    async txCreate(options: EtheriumTxOptions): Promise<TransactonData> {
+    async txCreate(options: EtheriumTxOptions): Promise<EtheriumTxDataOptions> {
 
         if(!this.validateTransactionOptions(options)){ 
             throw new Error('Options are Incorrect')

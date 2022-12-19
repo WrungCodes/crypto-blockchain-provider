@@ -84,7 +84,7 @@ class EtheriumTokenProvider implements ICryptoProvider<EtheriumTokenTxOptions, E
         return await this.contract.methods.balanceOf(address).call()
     }
 
-    async txCreate(options: EtheriumTokenTxOptions): Promise<TransactonData> {
+    async txCreate(options: EtheriumTokenTxOptions): Promise<EtheriumTokenTxDataOptions> {
         this.checkInititiate()
 
         const nonce = await this.web3.eth.getTransactionCount(options.agent.address, 'pending')
