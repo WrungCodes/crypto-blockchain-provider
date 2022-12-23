@@ -17,4 +17,8 @@ export namespace ProviderOptions {
         tokenId: string;
         ticker: string;
     }
+
+    export interface HeliumOptions {
+        rpcAddress: string;
+    }
 }

@@ -7,5 +7,6 @@ import { ProviderOptions } from "./IProviderOptions";
 export type ProviderOptionsType = 
     [ IProvider.BTC, ProviderOptions.BitcoinOptions] |
     [ IProvider.ETH, ProviderOptions.EtheriumOptions] |
-    [ IProvider.ETHTOKEN, ProviderOptions.EtheriumTokenOptions] 
+    [ IProvider.ETHTOKEN, ProviderOptions.EtheriumTokenOptions] |
+    [ IProvider.HNT, ProviderOptions.HeliumOptions] 
 ;
